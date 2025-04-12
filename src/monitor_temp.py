@@ -8,10 +8,9 @@ class MonitorTemperaturaRPI:
         self.intervalo = intervalo
         self.tiempos = []
         self.temperaturas = []
-        self.inicio = time.time()
-
-        plt.ion()
-        self.fig, self.ax = plt.subplots()
+        self.inicio = time.time() # Guarda el tiempo de inicio
+        plt.ion() #Activa la libreria interactiva de matplotlib
+        self.fig, self.ax = plt.subplots() # Crea una figura y un eje
 
     def leer_temperatura(self):
         try:
@@ -23,11 +22,11 @@ class MonitorTemperaturaRPI:
             return None
 
     def actualizar_datos(self):
-        ahora = time.time() - self.inicio
-        temp = self.leer_temperatura()
+        ahora = time.time() - self.inicio 
+        temp = self.leer_temperatura() # Lee la temperatura actual
         if temp is not None:
-            self.tiempos.append(ahora)
-            self.temperaturas.append(temp)
+            self.tiempos.append(ahora) # Guarda el tiempo actual
+            self.temperaturas.append(temp) # Guarda la temperatura actual
 
             while self.tiempos and self.tiempos[0] < ahora - self.duracion_max:
                 self.tiempos.pop(0)
