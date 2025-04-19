@@ -15,13 +15,42 @@ Este script implementa una herramienta de monitoreo en tiempo real de la tempera
 1. Importaciones
 
 import matplotlib.pyplot as plt
+
 import time
+
 import subprocess
+
 import csv
+
 import random
+
 import os
 
-Se importan los módulos necesarios para graficación, manejo de tiempo, ejecución de comandos del sistema, escritura de archivos CSV y manejo de archivos.
+-Se importan los módulos necesarios para graficación, manejo de tiempo, ejecución de comandos del sistema, escritura de archivos CSV y manejo de archivos.
+
+2. Configuración del archivo CSV
+
+archivo_csv = 'src/test_datos_Temp.csv'
+
+Define la ruta del archivo donde se almacenarán los datos históricos de temperatura.
+
+### Clase: MonitorTemperaturaRPI
+
+def __init__(self, duracion_max=60, intervalo=0.5, archivo_csv=archivo_csv)
+
+duracion_max: Duración máxima (en segundos) para mantener los datos en la gráfica (por defecto: 60s).
+
+intervalo: Tiempo de espera entre lecturas de temperatura (en segundos).
+
+archivo_csv: Ruta del archivo donde se guardan los datos recolectados.
+
+Inicializa:
+
+Listas para almacenar el tiempo transcurrido y las temperaturas.
+
+El archivo CSV, escribiendo encabezados si no existe.
+
+Una figura interactiva (matplotlib) para graficar en tiempo real.
 
 
 ## Preguntas
