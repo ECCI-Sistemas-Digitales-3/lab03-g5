@@ -116,18 +116,24 @@ La clase MonitorTemperaturaRPI encapsula toda la funcionalidad, haciendo el cód
 
 1. ¿Qué función cumple ```plt.fignum_exists(self.fig.number)``` en el ciclo principal?
 
+Verifica si la ventana de la figura de matplotlib sigue abierta. Permite que el ciclo de monitoreo se ejecute solo mientras la ventana gráfica esté activa. Cuando el usuario cierra la ventana, la condición se vuelve falsa y el bucle se detiene limpiamente.
+
 2. ¿Por qué se usa ```time.sleep(self.intervalo)``` y qué pasa si se quita?
 
-3. ¿Qué ventaja tiene usar ```__init__``` para inicializar listas y variables?
+Se utiliza para pausar la ejecución del bucle durante un tiempo definido (intervalo) entre cada lectura de temperatura. Esto reduce la carga sobre el sistema y establece una frecuencia constante de muestreo.
 
-4. ¿Qué se está midiendo con ```self.inicio = time.time()```?
+Si se elimina, el bucle se ejecutaría de forma continua sin pausas, generando un exceso de lecturas, sobrecargando la CPU y dificultando la visualización en tiempo real.
 
-5. ¿Qué hace exactamente ```subprocess.check_output(...)```?
+4. ¿Qué ventaja tiene usar ```__init__``` para inicializar listas y variables?
 
-6. ¿Por qué se almacena ```ahora = time.time() - self.inicio``` en lugar del tiempo absoluto?
+5. ¿Qué se está midiendo con ```self.inicio = time.time()```?
 
-7. ¿Por qué se usa ```self.ax.clear()``` antes de graficar?
+6. ¿Qué hace exactamente ```subprocess.check_output(...)```?
 
-8. ¿Qué captura el bloque ```try...except``` dentro de ```leer_temperatura()```?
+7. ¿Por qué se almacena ```ahora = time.time() - self.inicio``` en lugar del tiempo absoluto?
 
-9. ¿Cómo podría modificar el script para guardar las temperaturas en un archivo .```csv```?
+8. ¿Por qué se usa ```self.ax.clear()``` antes de graficar?
+
+9. ¿Qué captura el bloque ```try...except``` dentro de ```leer_temperatura()```?
+
+10. ¿Cómo podría modificar el script para guardar las temperaturas en un archivo .```csv```?
