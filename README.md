@@ -14,17 +14,17 @@ Este script implementa una herramienta de monitoreo en tiempo real de la tempera
 ### ESTRUCTURA CODIGO
 1. Importaciones
 
-import matplotlib.pyplot as plt
+```import matplotlib.pyplot as plt```
 
-import time
+```import time```
 
-import subprocess
+```import subprocess```
 
-import csv
+```import csv```
 
-import random
+```import random```
 
-import os
+```import os```
 
 -Se importan los módulos necesarios para graficación, manejo de tiempo, ejecución de comandos del sistema, escritura de archivos CSV y manejo de archivos.
 
