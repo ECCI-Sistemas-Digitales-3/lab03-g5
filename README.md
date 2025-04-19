@@ -52,6 +52,43 @@ El archivo CSV, escribiendo encabezados si no existe.
 
 Una figura interactiva (matplotlib) para graficar en tiempo real.
 
+### Métodos: 
+
+*Leer_temperatura()*
+
+--def leer_temperatura(self)
+
+Ejecuta el comando vcgencmd measure_temp para obtener la temperatura actual del CPU. Devuelve el valor como float. En caso de error, devuelve None.
+
+*Actualizar_datos()*
+
+--def actualizar_datos(self)
+
+Calcula el tiempo transcurrido desde el inicio. Llama a leer_temperatura() para obtener la temperatura. Almacena tiempo y temperatura en listas y en el archivo CSV. Elimina datos antiguos si exceden la duracion_max.
+
+*graficar()*
+
+--def graficar(self)
+
+Limpia el gráfico actual. Dibuja una línea roja con los datos actualizados. Añade títulos, etiquetas de ejes y grilla. Actualiza el canvas gráfico en tiempo real.
+
+*ejecutar()*
+
+--def ejecutar(self)
+
+Ciclo principal del programa.
+
+Mientras la ventana de la gráfica esté activa: Actualiza los datos, redibuja la gráfica, espera el intervalo definido.
+
+Se puede interrumpir con Ctrl+C, cerrando limpiamente la interfaz gráfica.
+
+*guardar_datos_csv()*
+
+--def guardar_datos_csv(self, tiempo, temperatura)
+
+Abre el archivo CSV en modo de anexado y escribe una nueva línea con el tiempo y la temperatura actual.
+
+
 
 ## Preguntas
 
