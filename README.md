@@ -34,7 +34,7 @@ archivo_csv = 'src/test_datos_Temp.csv'
 
 Define la ruta del archivo donde se almacenarán los datos históricos de temperatura.
 
-### Clase: MonitorTemperaturaRPI
+### CLASE: MonitorTemperaturaRPI
 
 def __init__(self, duracion_max=60, intervalo=0.5, archivo_csv=archivo_csv)
 
@@ -44,7 +44,7 @@ intervalo: Tiempo de espera entre lecturas de temperatura (en segundos).
 
 archivo_csv: Ruta del archivo donde se guardan los datos recolectados.
 
-Inicializa:
+*Inicializa:*
 
 Listas para almacenar el tiempo transcurrido y las temperaturas.
 
@@ -52,27 +52,27 @@ El archivo CSV, escribiendo encabezados si no existe.
 
 Una figura interactiva (matplotlib) para graficar en tiempo real.
 
-### Métodos: 
+### MÉTODOS: 
 
-*Leer_temperatura()*
+# *Leer_temperatura()*
 
 --def leer_temperatura(self)
 
 Ejecuta el comando vcgencmd measure_temp para obtener la temperatura actual del CPU. Devuelve el valor como float. En caso de error, devuelve None.
 
-*Actualizar_datos()*
+# *Actualizar_datos()*
 
 --def actualizar_datos(self)
 
 Calcula el tiempo transcurrido desde el inicio. Llama a leer_temperatura() para obtener la temperatura. Almacena tiempo y temperatura en listas y en el archivo CSV. Elimina datos antiguos si exceden la duracion_max.
 
-*graficar()*
+# *graficar()*
 
 --def graficar(self)
 
 Limpia el gráfico actual. Dibuja una línea roja con los datos actualizados. Añade títulos, etiquetas de ejes y grilla. Actualiza el canvas gráfico en tiempo real.
 
-*ejecutar()*
+# *ejecutar()*
 
 --def ejecutar(self)
 
@@ -82,11 +82,19 @@ Mientras la ventana de la gráfica esté activa: Actualiza los datos, redibuja l
 
 Se puede interrumpir con Ctrl+C, cerrando limpiamente la interfaz gráfica.
 
-*guardar_datos_csv()*
+# *guardar_datos_csv()*
 
 --def guardar_datos_csv(self, tiempo, temperatura)
 
 Abre el archivo CSV en modo de anexado y escribe una nueva línea con el tiempo y la temperatura actual.
+
+### BLOQUE PRINCIPAL DE LA EJECUCIÓN
+
+if __name__ == "__main__":
+    monitor = MonitorTemperaturaRPI()
+    monitor.ejecutar()
+
+Instancia la clase y ejecuta el proceso de monitoreo si el archivo es ejecutado directamente como script.
 
 
 
