@@ -8,7 +8,12 @@
 - [Johana Stephany Toro Echeverria](https://github.com/JohanaT97)
 
 ## Documentación
+### Descripción Técnica del Código contacto.py
 
+En este archivo hemos implementado una clase Contacto que se estructura de la siguiente manera:
+1. *Constructor de la Clase (__init__)*:
+
+La clase Contacto define su constructor mediante el método especial __init__, el cual inicializa los atributos de instancia al momento de crear un objeto. Los parámetros que recibe son: self, id, nombre, telefono, fecha_nacimiento, correo y area.
 
 
 ## Preguntas
