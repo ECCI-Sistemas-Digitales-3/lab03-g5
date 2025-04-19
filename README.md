@@ -132,9 +132,13 @@ Permite establecer el estado inicial del objeto al momento de su creación. Sus 
 
 Captura el tiempo en segundos desde la época UNIX al inicio del monitoreo. Se usa como referencia para calcular el tiempo transcurrido desde que comenzó el script, útil para representar el eje X en la gráfica.
 
-6. ¿Qué hace exactamente ```subprocess.check_output(...)```?
+5. ¿Qué hace exactamente ```subprocess.check_output(...)```?
 
-7. ¿Por qué se almacena ```ahora = time.time() - self.inicio``` en lugar del tiempo absoluto?
+Ejecuta un comando del sistema operativo desde Python (en este caso, vcgencmd measure_temp) y captura su salida como texto. Permite obtener datos del sistema, como la temperatura del CPU, desde la terminal sin intervención del usuario
+
+6. ¿Por qué se almacena ```ahora = time.time() - self.inicio``` en lugar del tiempo absoluto?
+
+Se calcula el tiempo transcurrido desde que inició el monitoreo para: Mostrar valores relativos más comprensibles en la gráfica (por ejemplo, “25 segundos desde el inicio”). Evitar trabajar con timestamps absolutos que son más difíciles de leer y graficar.
 
 8. ¿Por qué se usa ```self.ax.clear()``` antes de graficar?
 
