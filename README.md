@@ -30,13 +30,13 @@ Este script implementa una herramienta de monitoreo en tiempo real de la tempera
 
 2. Configuración del archivo CSV
 
-archivo_csv = 'src/test_datos_Temp.csv'
+```archivo_csv = 'src/test_datos_Temp.csv'```
 
 Define la ruta del archivo donde se almacenarán los datos históricos de temperatura.
 
 ### CLASE: MonitorTemperaturaRPI
 
-def __init__(self, duracion_max=60, intervalo=0.5, archivo_csv=archivo_csv)
+```def __init__(self, duracion_max=60, intervalo=0.5, archivo_csv=archivo_csv)```
 
 duracion_max: Duración máxima (en segundos) para mantener los datos en la gráfica (por defecto: 60s).
 
@@ -56,25 +56,25 @@ Una figura interactiva (matplotlib) para graficar en tiempo real.
 
 # *Leer_temperatura()*
 
---def leer_temperatura(self)
+```def leer_temperatura(self)```
 
 Ejecuta el comando vcgencmd measure_temp para obtener la temperatura actual del CPU. Devuelve el valor como float. En caso de error, devuelve None.
 
 # *Actualizar_datos()*
 
---def actualizar_datos(self)
+```def actualizar_datos(self)```
 
 Calcula el tiempo transcurrido desde el inicio. Llama a leer_temperatura() para obtener la temperatura. Almacena tiempo y temperatura en listas y en el archivo CSV. Elimina datos antiguos si exceden la duracion_max.
 
 # *graficar()*
 
---def graficar(self)
+```def graficar(self)```
 
 Limpia el gráfico actual. Dibuja una línea roja con los datos actualizados. Añade títulos, etiquetas de ejes y grilla. Actualiza el canvas gráfico en tiempo real.
 
 # *ejecutar()*
 
---def ejecutar(self)
+```def ejecutar(self)```
 
 Ciclo principal del programa.
 
@@ -84,16 +84,16 @@ Se puede interrumpir con Ctrl+C, cerrando limpiamente la interfaz gráfica.
 
 # *guardar_datos_csv()*
 
---def guardar_datos_csv(self, tiempo, temperatura)
+```def guardar_datos_csv(self, tiempo, temperatura)```
 
 Abre el archivo CSV en modo de anexado y escribe una nueva línea con el tiempo y la temperatura actual.
 
 
 ### BLOQUE PRINCIPAL DE LA EJECUCIÓN
 
-if __name__ == "__main__":
-    monitor = MonitorTemperaturaRPI()
-    monitor.ejecutar()
+```if __name__ == "__main__":```
+    ```monitor = MonitorTemperaturaRPI()```
+    ```monitor.ejecutar()```
 
 Instancia la clase y ejecuta el proceso de monitoreo si el archivo es ejecutado directamente como script.
 
@@ -103,7 +103,7 @@ Instancia la clase y ejecuta el proceso de monitoreo si el archivo es ejecutado 
 Gráfica en tiempo real que muestra la evolución de la temperatura del CPU en función del tiempo.
 Archivo CSV con registros históricos con formato:
 
-Tiempo (s), Temperatura (°C)
+```Tiempo (s), Temperatura (°C)```
 
 1.0, 53.2
 1.5, 53.6
