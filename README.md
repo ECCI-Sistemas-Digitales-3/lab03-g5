@@ -104,10 +104,13 @@ Gráfica en tiempo real que muestra la evolución de la temperatura del CPU en f
 Archivo CSV con registros históricos con formato:
 
 Tiempo (s), Temperatura (°C)
+
 1.0, 53.2
 1.5, 53.6
 
+### FINAL
 
+La clase MonitorTemperaturaRPI encapsula toda la funcionalidad, haciendo el código modular, reutilizable y fácilmente integrable en otros sistemas de monitoreo o automatización.
 
 ## Preguntas
 
