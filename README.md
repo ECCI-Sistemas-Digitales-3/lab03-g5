@@ -124,9 +124,13 @@ Se utiliza para pausar la ejecución del bucle durante un tiempo definido (inter
 
 Si se elimina, el bucle se ejecutaría de forma continua sin pausas, generando un exceso de lecturas, sobrecargando la CPU y dificultando la visualización en tiempo real.
 
-4. ¿Qué ventaja tiene usar ```__init__``` para inicializar listas y variables?
+3. ¿Qué ventaja tiene usar ```__init__``` para inicializar listas y variables?
 
-5. ¿Qué se está midiendo con ```self.inicio = time.time()```?
+Permite establecer el estado inicial del objeto al momento de su creación. Sus ventajas son: encapsula toda la configuración y variables necesarias para el funcionamiento del objeto. Evita errores por variables no inicializadas. Facilita la reutilización y personalización del objeto mediante parámetros.
+
+4. ¿Qué se está midiendo con ```self.inicio = time.time()```?
+
+Captura el tiempo en segundos desde la época UNIX al inicio del monitoreo. Se usa como referencia para calcular el tiempo transcurrido desde que comenzó el script, útil para representar el eje X en la gráfica.
 
 6. ¿Qué hace exactamente ```subprocess.check_output(...)```?
 
