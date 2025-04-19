@@ -88,6 +88,7 @@ Se puede interrumpir con Ctrl+C, cerrando limpiamente la interfaz gráfica.
 
 Abre el archivo CSV en modo de anexado y escribe una nueva línea con el tiempo y la temperatura actual.
 
+
 ### BLOQUE PRINCIPAL DE LA EJECUCIÓN
 
 if __name__ == "__main__":
@@ -95,6 +96,16 @@ if __name__ == "__main__":
     monitor.ejecutar()
 
 Instancia la clase y ejecuta el proceso de monitoreo si el archivo es ejecutado directamente como script.
+
+
+### SALIDA ESPERADA
+
+Gráfica en tiempo real que muestra la evolución de la temperatura del CPU en función del tiempo.
+Archivo CSV con registros históricos con formato:
+
+Tiempo (s), Temperatura (°C)
+1.0, 53.2
+1.5, 53.6
 
 
 
