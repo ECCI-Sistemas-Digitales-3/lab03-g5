@@ -140,8 +140,16 @@ Ejecuta un comando del sistema operativo desde Python (en este caso, vcgencmd me
 
 Se calcula el tiempo transcurrido desde que inició el monitoreo para: Mostrar valores relativos más comprensibles en la gráfica (por ejemplo, “25 segundos desde el inicio”). Evitar trabajar con timestamps absolutos que son más difíciles de leer y graficar.
 
-8. ¿Por qué se usa ```self.ax.clear()``` antes de graficar?
+7. ¿Por qué se usa ```self.ax.clear()``` antes de graficar?
 
-9. ¿Qué captura el bloque ```try...except``` dentro de ```leer_temperatura()```?
+Se limpia el contenido previo del eje (ax) para evitar que las gráficas antiguas se dibujen encima de las nuevas. Permite una visualización clara y actualizada de los datos en cada iteración.
 
-10. ¿Cómo podría modificar el script para guardar las temperaturas en un archivo .```csv```?
+8. ¿Qué captura el bloque ```try...except``` dentro de ```leer_temperatura()```?
+
+Captura cualquier error que pueda ocurrir al ejecutar el comando externo o convertir el resultado en número. Por ejemplo: Si el comando vcgencmd falla. Si el formato de salida cambia. Si la conversión a float lanza una excepción.
+
+Esto evita que el programa se detenga por errores puntuales durante la lectura.
+
+9. ¿Cómo podría modificar el script para guardar las temperaturas en un archivo .```csv```?
+
+Cambia la ruta del archivo CSV en el parámetro archivo_csv del constructor. Agregar una marca de tiempo legible (datetime.now()) si se quiere formato de fecha real.
