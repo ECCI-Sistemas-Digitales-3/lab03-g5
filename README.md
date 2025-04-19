@@ -13,6 +13,7 @@ Este script implementa una herramienta de monitoreo en tiempo real de la tempera
 
 ### ESTRUCTURA CODIGO
 1. Importaciones
+
 import matplotlib.pyplot as plt
 import time
 import subprocess
