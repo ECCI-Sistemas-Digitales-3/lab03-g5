@@ -91,7 +91,7 @@ El diagrama muestra:
 
 El programa muestra en tiempo real una gráfica de la temperatura del CPU de la Raspberry Pi:
 
-![Gráfica de Temperatura](src/img/monitor_temp.png)
+![Gráfica de Temperatura](https://github.com/ECCI-Sistemas-Digitales-3/lab03-g5/blob/main/src/img/image.png)
 
 Características de la visualización:
 - Eje X: Tiempo transcurrido en segundos
