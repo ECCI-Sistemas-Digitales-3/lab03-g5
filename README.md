@@ -1,17 +1,18 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19144093&assignment_repo_type=AssignmentRepo)
 # Lab03: Visualización de Datos en Raspberry Pi Zero W
 
-# Lab03: Visualización de Datos en Raspberry Pi Zero W
-
 ## Integrantes
 
 - [David Santiago Laiton Gutierrez](https://github.com/dslaitong)
 - [Edgar Giovanni Neira Lugo](https://github.com/Gioneira)
 - [Johana Stephany Toro Echeverria](https://github.com/JohanaT97)
 
-## Documentación
 
-### MÉTODOS PRINCIPALES
+
+### INTRODUCCIÓN
+Este script implementa una herramienta de monitoreo en tiempo real de la temperatura del procesador de una Raspberry. Utiliza matplotlib para graficar dinámicamente los datos obtenidos desde el sistema mediante el comando vcgencmd. Además, los datos recolectados se almacenan en un archivo CSV para su posterior análisis.
+## Documentación
+##### MÉTODOS PRINCIPALES
 
 #### 1. `__init__(self, duracion_max=60, intervalo=0.5, archivo_csv=archivo_csv)`
 - **Propósito**: Constructor de la clase que inicializa el monitor de temperatura
@@ -68,8 +69,6 @@
   - Abre archivo en modo append
   - Escribe nueva línea con tiempo y temperatura
 
-### INTRODUCCIÓN
-Este script implementa una herramienta de monitoreo en tiempo real de la temperatura del procesador de una Raspberry. Utiliza matplotlib para graficar dinámicamente los datos obtenidos desde el sistema mediante el comando vcgencmd. Además, los datos recolectados se almacenan en un archivo CSV para su posterior análisis.
 
 ### DIAGRAMA DE FLUJO
 
