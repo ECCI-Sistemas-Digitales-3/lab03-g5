@@ -84,7 +84,7 @@ El diagrama muestra:
 - Visualización gráfica en tiempo real
 - Lógica de finalización del programa
 
-// ...existing code...
+//
 
 ### ESTRUCTURA DEL CÓDIGO
 
