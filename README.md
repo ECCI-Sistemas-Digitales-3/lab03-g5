@@ -71,6 +71,22 @@
 ### INTRODUCCIÓN
 Este script implementa una herramienta de monitoreo en tiempo real de la temperatura del procesador de una Raspberry. Utiliza matplotlib para graficar dinámicamente los datos obtenidos desde el sistema mediante el comando vcgencmd. Además, los datos recolectados se almacenan en un archivo CSV para su posterior análisis.
 
+### DIAGRAMA DE FLUJO
+
+El siguiente diagrama representa el flujo de ejecución del monitor de temperatura, ilustrando los procesos principales y la lógica del programa:
+
+![Diagrama de Flujo](src/img/Diagrama%20de%20Flujo.png)
+
+El diagrama muestra:
+- Proceso de inicialización del monitor
+- Verificación y creación del archivo CSV
+- Ciclo principal de monitoreo
+- Procesos de actualización de datos
+- Visualización gráfica en tiempo real
+- Lógica de finalización del programa
+
+// ...existing code...
+
 ### ESTRUCTURA DEL CÓDIGO
 
 #### 1. Importaciones
@@ -171,4 +187,5 @@ Esto evita que el programa se detenga por errores puntuales durante la lectura.
 
 ¿Cómo podría modificar el script para guardar las temperaturas en un archivo .csv?
 
-Cambia la ruta del archivo CSV en el parámetro archivo_csv del constructor. Agregar una marca de tiempo legible (datetime.now()) si se quiere formato de fecha real.
+Cambia la ruta del archivo CSV en el parámetro archivo_csv del constructor. Agregar una marca de tiempo legible (datetime.now()) si se quiere formato de fecha real.// ...existing code...
+
