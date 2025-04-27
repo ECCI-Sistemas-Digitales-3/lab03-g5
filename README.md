@@ -86,6 +86,23 @@ El diagrama muestra:
 
 //
 
+
+### VISUALIZACIÓN DE LA GRÁFICA
+
+El programa muestra en tiempo real una gráfica de la temperatura del CPU de la Raspberry Pi:
+
+![Gráfica de Temperatura](src/img/monitor_temp.png)
+
+Características de la visualización:
+- Eje X: Tiempo transcurrido en segundos
+- Eje Y: Temperatura en grados Celsius
+- Línea roja: Evolución de la temperatura
+- Actualización en tiempo real
+- Ventana de 60 segundos de datos
+- Título y etiquetas descriptivas
+- Grilla para mejor lectura de valores
+
+
 ### ESTRUCTURA DEL CÓDIGO
 
 #### 1. Importaciones
